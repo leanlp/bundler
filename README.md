@@ -26,7 +26,7 @@ docker run --rm -ti --name geth -p 8545:8545 ethereum/client-go:v1.10.26 \
   --networkid 5
 ```
 
-//with local node 
+// with local node 
 yarn run runop --network http://localhost:8545/ --entryPoint 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789 --mnemonic ./localconfig/mnemonic.txt
 
 yarn run runop --network goerli --entryPoint 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789 --mnemonic ./localconfig/mnemonic.txt
