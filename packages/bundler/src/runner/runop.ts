@@ -122,7 +122,7 @@ async function main (): Promise<void> {
     const signer = provider.getSigner()
 
     const signerBalance = await provider.getBalance(signer.getAddress())
-    // const account = '0xB3E1275Be2649E8cf8e4643da197d6F7B309626A'
+    const account = '0xDbf595864475666214cf7457741e01931501Cbf2'
     const bal = await provider.getBalance(account)
     if (bal.lt(parseEther('1')) && signerBalance.gte(parseEther('10000'))) {
       console.log('funding hardhat account', account)
@@ -159,10 +159,10 @@ async function main (): Promise<void> {
       throw new Error('must specify --mnemonic')
     }
   }
-  const w= ethers.Wallet.fromMnemonic("race ostrich bulb mushroom float noodle intact rotate genuine over fork story")
+  
 
-  const accountOwner = w
-  // new Wallet('0x'.padEnd(66, '7'))
+  
+  const accountOwner = new Wallet('0x'.padEnd(66, '7'))
 
   const index = opts.nonce ?? Date.now()
   console.log('using account index=', index)
