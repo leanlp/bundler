@@ -36,6 +36,13 @@ Now your bundler is active on local url http://localhost:3000/rpc
 
 To run a simple test, do `yarn run runop --deployFactory --network http://localhost:8545/ --entryPoint 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789`
 
+
+// with local node yarn run runop --network http://localhost:8545/ --entryPoint 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789 --mnemonic ./localconfig/mnemonic.txt
+
+yarn run runop --network goerli --entryPoint 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789 --mnemonic ./localconfig/mnemonic.txt
+
+yarn run bundler --network goerli --mnemonic ./localconfig/mnemonic.txt --unsafe yarn run bundler --network http://localhost:8545 --mnemonic ./localconfig/mnemonic.txt --unsafe
+
    The runop script:
    - deploys a wallet deployer (if not already there)
    - creates a random signer (owner for wallet)
